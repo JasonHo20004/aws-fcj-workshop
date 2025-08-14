@@ -1,6 +1,6 @@
 ---
 title : "Tạo Public subnet"
-date :  "`r Sys.Date()`" 
+date :  "2025-01-27" 
 weight : 2
 chapter : false
 pre : " <b> 2.1.2 </b> "

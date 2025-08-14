@@ -1,6 +1,6 @@
 ---
 title : "Create VPC"
-date : "`r Sys.Date()`"
+date : "2025-01-27"
 weight : 1
 chapter : false
 pre : " <b> 2.1.1 </b> "
