@@ -3,8 +3,6 @@ title = "Deploy All Services with Serverless Framework"
 weight = 4
 +++
 
-# Deploy All Services with Serverless Framework
-
 ## What you'll do
 - Deploy all backend services using the Serverless Framework (Auth, Message, Real-time, Connect)
 - Capture API Gateway endpoints and WebSocket URL
@@ -177,6 +175,24 @@ Run locally:
 cd telegrama-ui
 npm run dev
 ```
+
+Below are snapshots of the UI showing the key interfaces:
+
+![Login_UI](/images/login_ui.png)
+*Login screen where users can sign in or register new accounts*
+
+![Chat_UI](/images/chat_ui.png)
+*Main chat interface showing conversations and messages*
+
+At this point, you can test the full functionality:
+
+1. Register at least 2 test accounts to try the chat features
+2. Log in with each account in separate browser windows/tabs
+3. Create a conversation between the accounts
+4. Send messages back and forth to verify real-time updates
+5. Try additional features like typing indicators and direct messages
+
+The UI will automatically connect to your deployed backend services and handle all the WebSocket/API interactions.
 
 {{% notice warning %}}
 `VITE_CONNECT_API_BASE_URL` is required for user search and direct conversation features. Without it, those features will not work properly.

@@ -3,8 +3,6 @@ title = "Deploy Infrastructure & Services"
 weight = 3
 +++
 
-# Deploy Infrastructure & Services
-
 ## What you'll do
 - Prepare networking (VPC subnets and security group) for Lambda and Redis
 - Provision or connect to an existing ElastiCache Redis cluster

@@ -3,8 +3,6 @@ title = "Overview & Introduction"
 weight = 1
 +++
 
-# Overview & Introduction
-
 ## Workshop Overview
 
 **Workshop Name**: Deploy Real-Time Chat System on AWS Serverless  

@@ -3,8 +3,6 @@ title = "Prerequisites & Environment Setup"
 weight = 2
 +++
 
-## Prerequisites & Environment Setup
-
 ## What you'll do
 - Install tools: Node.js, npm, AWS CLI, Serverless Framework, Git
 - Configure AWS credentials and set region `ap-south-1`
