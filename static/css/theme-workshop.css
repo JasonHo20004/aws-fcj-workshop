@@ -55,6 +55,24 @@ a:hover {
 	color: var(--MENU-VISITED-color);
 }
 
+/* Ensure the visited check icon appears only once and is vertically centered
+   even when the menu item text wraps to multiple lines */
+#sidebar ul li > a {
+    position: relative;
+    padding-right: 22px; /* space for the check icon */
+}
+#sidebar ul li > a .read-icon {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    float: none; /* avoid duplicate visual on wrapped lines */
+}
+/* Guard against accidental duplicate icons */
+#sidebar ul li > a .read-icon ~ .read-icon {
+    display: none !important;
+}
+
 #sidebar #footer {
   padding-top: 20px !important;
 }

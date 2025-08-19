@@ -8,7 +8,7 @@ weight = 1
 **Workshop Name**: Deploy Real-Time Chat System on AWS Serverless  
 **Objective**: Deploy and operate a complete real-time chat system using serverless microservices architecture on AWS  
 **Estimated Duration**: 3-4 hours (can be divided into multiple sessions)  
-**Level**: Beginner-Intermediate (basic AWS knowledge required)
+**Level**: Intermediate (AWS knowledge required)
 
 ## What You'll Build
 
