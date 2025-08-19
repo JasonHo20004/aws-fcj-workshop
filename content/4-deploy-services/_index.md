@@ -65,10 +65,6 @@ cd ..
 
 ![messageService_Deploy](/images/messageService_deploy.png)
 
-Notes:
-- Creates the `Messages` table with GSI `conversationIdIndex`.
-- Capture the base HTTP API URL (`/sendMessage`, `/getMessage`, ...).
-
 ---
 
 ### 4) Deploy Real-time Service (WebSocket)
@@ -78,10 +74,10 @@ cd realTimeService
 serverless deploy
 cd ..
 ```
+![realTimeService_Deploy](/images/realTimeService_deploy.png)
 
 Notes:
 - Requires working VPC subnets and security group as configured earlier.
-- Creates WebSocket API and tables `websocket-connections`, `conversation-members-table`, plus SNS topic `chat-message-topic`.
 - Copy the WebSocket endpoint from stack outputs (looks like `wss://<api-id>.execute-api.ap-south-1.amazonaws.com/dev`).
 
 ---
@@ -94,9 +90,7 @@ serverless deploy
 cd ..
 ```
 
-Notes:
-- Creates the `conversations` table with GSIs (`createdByIndex`, `createdAtIndex`).
-- Capture the base HTTP API URL for conversation management endpoints.
+![connectService_Deploy](/images/connectService_deploy.png)
 
 ---
 
@@ -109,11 +103,13 @@ After the first successful `realTimeService` deployment:
 ```bash
 # Example: endpoint is wss://abc123.execute-api.ap-south-1.amazonaws.com/dev
 aws ssm put-parameter --name "/WEBSOCKET_DOMAIN" \
-  --value "abc123.execute-api.ap-south-1.amazonaws.com" \
+  --value "<your_domain>.execute-api.ap-south-1.amazonaws.com" \
   --type String --overwrite
 ```
 
 2) Set `SNS_TOPIC_ARN` to the ARN of `chat-message-topic` created by `realTimeService`:
+
+![SNS_Topic](/images/sns_topic.png)
 
 ```bash
 aws ssm put-parameter --name "/SNS_TOPIC_ARN" \
